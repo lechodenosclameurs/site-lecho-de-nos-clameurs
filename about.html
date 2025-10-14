@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>À propos - L'écho de nos clameurs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; background: #f8f9fa; color: #222; }
+    header { background: #2f3e9e; color: #fff; padding: 0; }
+    .banner { width: 100%; display: block; }
+    .container { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 40px; }
+    h1, h2 { font-weight: 700; }
+    h1 { margin-top: 0; }
+    h2 { color: #2f3e9e; margin-top: 30px; }
+    ul { padding-left: 18px; }
+    .objectifs { margin-bottom: 30px; }
+    .logo { width: 140px; margin: 30px auto 20px auto; display: block; }
+    .team-list li { margin-bottom: 7px; }
+    .btn-group { margin: 20px 0 30px 0; display: flex; gap: 15px; flex-wrap: wrap; }
+    .btn { background: #2f3e9e; color: #fff; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 2px 7px rgba(47,62,158,0.12); transition: background 0.2s; }
+    .btn:hover { background: #1d285e; }
+    .actualites { background: #f2f5ff; border-radius: 8px; padding: 18px; margin-bottom: 30px; }
+    .actualite-item { margin-bottom: 15px; }
+    .contact-bloc, .rejoindre-bloc { background: #f9f9f9; border-radius: 8px; padding: 18px; margin-bottom: 25px; box-shadow: 0 1px 3px rgba(47,62,158,0.08); }
+    .contact-bloc h2, .rejoindre-bloc h2 { margin-top: 0; }
+    @media (max-width: 600px) {
+      .container { padding: 15px; }
+      .logo { width: 100px; }
+      .btn-group { flex-direction: column; gap: 8px; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="banniere_clameurs.jpg" alt="Bannière Clameurs" class="banner">
+  </header>
+  <main class="container">
+    <img src="logo_echo_clameurs.png" alt="Logo L'écho de nos clameurs" class="logo">
+    <h1>À propos</h1>
 
+    <!-- Boutons vers les rubriques -->
+    <div class="btn-group">
+      <a href="/podcasts.html" class="btn">Podcasts</a>
+      <a href="/temoignages.html" class="btn">Témoignages</a>
+      <a href="/engagements.html" class="btn">Engagements</a>
+      <a href="/actualites.html" class="btn">Actualités</a>
+    </div>
+
+    <section>
+      <p>
+        Nous sommes un groupe d’amis qui avons participé à Clameurs.<br>
+        Scouts depuis les louveteaux-jeannettes, on a grandi ensemble autour du feu, en camp et sur les sentiers, comme vous cet été !<br>
+        Aujourd’hui, on a envie de continuer l’aventure qu’on a vécue à ce rassemblement et l’année qui l’a précédé et faire vivre cet esprit qui nous unit depuis toujours.
+      </p>
+    </section>
+    <section class="objectifs">
+      <h2>Nos objectifs</h2>
+      <ul>
+        <li>Faire un point régulier sur vos efforts et chaque action que vous menez, chacun d’entre vous et vos caravanes.</li>
+        <li>Vous montrer ce que les autres font suite au rassemblement et pour cette deuxième année de clameurs.</li>
+        <li>Écouter vos idées pour les autres groupes.</li>
+        <li>Vous montrer comment certaines associations ont besoin de votre aide et l’impact que vous avez pour elles et ceux qu’elles aident.</li>
+      </ul>
+    </section>
+
+    <!-- Rubrique dynamique : actualités et appels à l’action -->
+    <section class="actualites">
+      <h2>Actualités & Appels à l’action</h2>
+      <div class="actualite-item">
+        <strong>15 octobre 2025 :</strong> Lancement du podcast « l'echo de nos clameurs » – Découvrez le premier épisode !
+      </div>
+      <div class="actualite-item">
+        <strong>8 novembre 2025 :</strong> Appel aux témoignages : partagez vos expériences après le rassemblement.
+      </div>
+      <div class="actualite-item">
+        <strong>En cours :</strong> Soutien à l’association « Un Toit Pour Tous » – vos actions comptent !
+      </div>
+      <!-- Ajoute ou modifie les actualités selon tes besoins -->
+    </section>
+
+    <section>
+      <h2>L’équipe</h2>
+      <ul class="team-list">
+        <li><strong>Alexandre Lavagne :</strong> Fondateur associé et responsable developpement </li>
+        <li><strong>Clémence Pigeaud de Tarragon :</strong> Fondatrice associée et directrice artistique</li>
+        <li><strong>Constantin Py :</strong> Responsable développement data</li>
+        <li><strong>Judith Duprieu :</strong> Responsable script et mise en scène</li>
+        <li><strong>Paul RDL :</strong> Technicien vidéo et son</li>
+        <li><strong>Malo Foubert :</strong> Hôte d'accueil et mise en valeur des lieux de tournage</li>
+      </ul>
+    </section>
+
+    <!-- Bloc Contact -->
+    <section class="contact-bloc">
+      <h2>Contact</h2>
+      <p>
+        Une question, une suggestion, un témoignage ? Écris-nous à <a href="mailto:lechodenosclameurs@gmail.com">contact@lechodenosclameurs.fr</a><br>
+        ou utilise notre <a href="/contact.html">formulaire de contact</a>.
+      </p>
+    </section>
+
+    <!-- Bloc Rejoindre l’aventure -->
+    <section class="rejoindre-bloc">
+      <h2>Rejoindre l’aventure</h2>
+      <p>
+        Tu veux participer, proposer un projet, ou rejoindre l’équipe ?  
+        <a href="/rejoindre.html" class="btn">Rejoins-nous !</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 L’écho de nos clameurs. Tous droits réservés.
+  </footer>
+</body>
+</html>
