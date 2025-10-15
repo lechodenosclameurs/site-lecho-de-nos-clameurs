@@ -17,6 +17,72 @@
       --social-bg: #eaf7ea;
       --section-bg: #e6f4ea;
     }
+
+    /* ====== PAGE DE DÉMARRAGE ====== */
+    .landing {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: var(--main-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.6s;
+    }
+    .landing.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .landing-banner {
+      width: 100vw;
+      max-height: 140px;
+      overflow: hidden;
+      background: var(--main-color);
+      margin-bottom: 0;
+    }
+    .landing-banner img {
+      width: 100vw;
+      object-fit: cover;
+      display: block;
+      max-height: 140px;
+    }
+    .landing-logo {
+      width: 200px;
+      background: var(--bg-color);
+      border-radius: 2rem;
+      box-shadow: 0 4px 24px var(--nav-shadow);
+      padding: 20px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .landing-logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    body.landing-active .banner,
+    body.landing-active header,
+    body.landing-active nav,
+    body.landing-active main,
+    body.landing-active footer {
+      display: none !important;
+    }
+    @media (max-width: 600px) {
+      .landing-logo {
+        width: 120px;
+        padding: 12px;
+        margin-top: 2rem;
+      }
+      .landing-banner img {
+        max-height: 80px;
+      }
+    }
+
+    /* ====== STYLES DU SITE PRINCIPAL ====== */
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
@@ -157,10 +223,6 @@
       margin-bottom: 0.8rem;
       font-size: 1.3rem;
     }
-    .section-block p, .section-block ul {
-      margin: 0.8rem 0 0 0;
-      font-size: 1.08rem;
-    }
     .contact-list {
       list-style: none;
       padding: 0;
@@ -265,7 +327,18 @@
     }
   </style>
 </head>
-<body>
+<body class="landing-active">
+  <!-- ====== PAGE DE DÉMARRAGE ====== -->
+  <div class="landing" id="landingPanel">
+    <div class="landing-banner">
+      <img src="banner.jpg" alt="Bannière Clameurs" />
+    </div>
+    <div class="landing-logo">
+      <img src="logo-clameurs.png" alt="L’écho de nos clameurs Logo" />
+    </div>
+  </div>
+
+  <!-- ====== CONTENU PRINCIPAL ====== -->
   <div class="banner">
     <img src="banner.jpg" alt="Bannière Clameurs" />
   </div>
@@ -288,70 +361,67 @@
         Les clameurs des pauvres et de la terre sont nombreuses. Pour y répondre, prenons 2 ans pour expérimenter, partager et ancrer de nouvelles manières de vivre notre scoutisme. Ensemble bâtissons le monde de demain.
       </p>
       <p>
-        Il y a presque dix ans, la COP21 se déroulait à Paris et le pape François publiait l’encyclique Laudato Si’. Deux évènements clés pour la lutte contre le réchauffement climatique. Deux appels qui ont compté dans l’engagement pour la conversion écologique que nous, Scouts et Guides de France, avons entamé en 2009 avec la résolution “Habiter autrement la planète”.
-      </p>
-      <p>
-        Dix ans après ces deux appels, les clameurs de la terre et des pauvres, ces plaintes du monde vivant, sont encore nombreuses !
-      </p>
-      <p>
-        Par le monde, la jeunesse entend ces clameurs, s’inquiète et appelle à l’action : marches pour le climat, combat pour l’éducation, engagements associatifs, implication dans la vie locale... Et cela résonne au sein de notre mouvement de jeunesse : dans leurs projets nos scouts et guides aspirent à vivre davantage dans la nature, à aller à la rencontre d'autres jeunes, à mener des actions de solidarité et de protection de l’environnement.
-      </p>
-      <p>
-        Il est donc temps pour nous de répondre à l’urgence climatique et aux détresses des plus fragiles. De donner à la jeunesse, à chaque scout et à chaque guide, les clés pour agir. D’ouvrir nos portes afin que chaque personne, quelle qu’elle soit, d’où qu’elle vienne puisse vivre l’expérience du scoutisme. Et de participer, tous et toutes ensemble à la transformation de la société.
+        Il y a presque dix ans, la COP21 se déroulait à Paris et le pape François publiait l’encyclique Laudato Si’. Deux évènements clés pour la lutte contre le réchauffement climatique.
       </p>
       <p style="font-weight:bold;color:var(--main-color);">
         Faisons entendre nos clameurs.<br>Ensemble, on décide que c’est possible !
       </p>
       <a class="youtube-btn" href="https://youtu.be/BuRJ65O2zHA?si=x4FZvLhn5oV_BbWF" target="_blank">Voir la vidéo</a>
     </div>
+
     <div class="audio-player">
       <audio controls>
         <source src="episode1.mp3" type="audio/mpeg" />
         Votre navigateur ne supporte pas l’audio.
       </audio>
     </div>
+
     <div class="discover-link">
       <a href="https://clameurs.sgdf.fr/" target="_blank">Découvrir le projet Clameurs original</a>
     </div>
+
     <div class="section-block" id="contact">
       <h2>Contact</h2>
       <ul class="contact-list">
-        <li>Email : <a href="mailto:lechodenosclameurs@gmail.com">lechodenosclameurs@gmail.com</a></li>
-        <li>Instagram : <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank">@lecho_de_nos_clameurs</a></li>
+        <li>Email : <a href="mailto:lechodenosclameurs@gmail.com">lechodenosclameurs@gmail.com</a></li>
+        <li>Instagram : <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank">@lecho_de_nos_clameurs</a></li>
       </ul>
-      <p>Vous avez des questions, des propositions ou souhaitez participer au projet ? Contactez-nous !</p>
+      <p>Vous avez des questions, des propositions ou souhaitez participer au projet ? Contactez-nous !</p>
     </div>
+
     <div class="section-block" id="join">
       <h2>Nous rejoindre</h2>
       <p>
-        Vous souhaitez faire partie de l’aventure « L’écho de nos clameurs » ? Rejoignez-nous ! 
+        Vous souhaitez faire partie de l’aventure « L’écho de nos clameurs » ? Rejoignez-nous ! 
         <br>Nous sommes ouverts à toutes les envies d’engagement, d’interview, de partage et d’action pour le scoutisme et la planète.
       </p>
       <a class="join-btn" href="mailto:lechodenosclameurs@gmail.com">Devenir membre</a>
     </div>
   </main>
+
   <footer>
     <div>Retrouvez-nous sur les réseaux sociaux :</div>
     <div class="social-links">
-      <a href="https://youtube.com/@lechodenosclameurs?si=Gd4IfwZPbikIj--o" target="_blank" title="YouTube">
-        <span class="social-icon">
-          <!-- YouTube SVG icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#2e7d32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23.498 6.186c-.271-1.022-1.07-1.824-2.094-2.104C19.186 3.5 12 3.5 12 3.5s-7.186 0-9.404.582c-1.024.28-1.824 1.082-2.095 2.104C.5 8.41.5 12 .5 12s0 3.59.001 5.814c.271 1.022 1.071 1.824 2.095 2.104C4.814 20.5 12 20.5 12 20.5s7.186 0 9.404-.582c1.024-.28 1.823-1.082 2.094-2.104C23.5 15.59 23.5 12 23.5 12s0-3.59-.002-5.814zM9.75 15.02V8.98l6.5 3.02-6.5 3.02z"/>
-          </svg>
-        </span>
-        YouTube
-      </a>
-      <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank" title="Instagram">
-        <span class="social-icon">
-          <!-- Instagram SVG icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#2e7d32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.34 3.608 1.316.975.976 1.254 2.243 1.316 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.341 2.633-1.316 3.608-.975.976-2.242 1.254-3.608 1.316-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.34-3.608-1.316-.976-.975-1.254-2.242-1.316-3.608C2.175 15.646 2.163 15.266 2.163 12s.012-3.584.07-4.849c.062-1.366.34-2.633 1.316-3.608C4.524 2.573 5.791 2.295 7.157 2.233 8.422 2.175 8.802 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.77.131 4.615.37 3.678 1.309 2.74 2.246 2.501 3.401 2.442 4.683.013 8.332 0 8.741 0 12c0 3.259.013 3.668.072 4.948.059 1.282.298 2.437 1.236 3.374.937.937 2.092 1.177 3.374 1.236C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.282-.059 2.437-.299 3.374-1.236.937-.937 1.177-2.092 1.236-3.374.059-1.28.072-1.689.072-4.948s-.013-3.668-.072-4.948c-.059-1.282-.299-2.437-1.236-3.374-.937-.937-2.092-1.177-3.374-1.236C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 1-2.881 0 1.44 1.44 0 0 1 2.881 0z"/>
-          </svg>
-        </span>
-        Instagram
-      </a>
+      <a href="https://youtube.com/@lechodenosclameurs" target="_blank" title="YouTube">YouTube</a>
+      <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank" title="Instagram">Instagram</a>
     </div>
   </footer>
+
+  <script>
+    function hideLanding() {
+      document.body.classList.remove('landing-active');
+      document.getElementById('landingPanel').classList.add('hide');
+      setTimeout(() => {
+        document.getElementById('landingPanel').style.display = 'none';
+      }, 700);
+      window.removeEventListener('mousemove', hideLanding);
+      window.removeEventListener('keydown', hideLanding);
+      window.removeEventListener('touchstart', hideLanding);
+    }
+    window.addEventListener('mousemove', hideLanding);
+    window.addEventListener('keydown', hideLanding);
+    window.addEventListener('touchstart', hideLanding);
+  </script>
 </body>
 </html>
+
