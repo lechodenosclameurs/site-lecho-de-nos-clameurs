@@ -5,28 +5,40 @@
   <title>À propos - L'écho de nos clameurs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; background: #f8f9fa; color: #222; }
-    header { background: #2f3e9e; color: #fff; padding: 0; }
+    :root {
+      --main-green: #3C9A5F;
+      --main-green-dark: #297747;
+      --main-green-light: #e8f3eb;
+      --main-green-soft: #4BB977;
+    }
+    body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; background: var(--main-green-light); color: #222; }
+    header { background: var(--main-green); color: #fff; padding: 0; }
     .banner { width: 100%; display: block; }
     .container { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 40px; }
     h1, h2 { font-weight: 700; }
-    h1 { margin-top: 0; }
-    h2 { color: #2f3e9e; margin-top: 30px; }
+    h1 { margin-top: 0; color: var(--main-green-dark);}
+    h2 { color: var(--main-green); margin-top: 30px; }
     ul { padding-left: 18px; }
     .objectifs { margin-bottom: 30px; }
     .logo { width: 140px; margin: 30px auto 20px auto; display: block; }
     .team-list li { margin-bottom: 7px; }
     .btn-group { margin: 20px 0 30px 0; display: flex; gap: 15px; flex-wrap: wrap; }
-    .btn { background: #2f3e9e; color: #fff; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 2px 7px rgba(47,62,158,0.12); transition: background 0.2s; }
-    .btn:hover { background: #1d285e; }
-    .actualites { background: #f2f5ff; border-radius: 8px; padding: 18px; margin-bottom: 30px; }
+    .btn { background: var(--main-green-soft); color: #fff; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 2px 7px rgba(47,62,158,0.12); transition: background 0.2s; border: none;}
+    .btn:hover { background: var(--main-green-dark); }
+    .actualites { background: #e8f3eb; border-radius: 8px; padding: 18px; margin-bottom: 30px; border-left: 4px solid var(--main-green); }
     .actualite-item { margin-bottom: 15px; }
     .contact-bloc, .rejoindre-bloc { background: #f9f9f9; border-radius: 8px; padding: 18px; margin-bottom: 25px; box-shadow: 0 1px 3px rgba(47,62,158,0.08); }
     .contact-bloc h2, .rejoindre-bloc h2 { margin-top: 0; }
+    .footer-links { margin-bottom: 12px; display: flex; justify-content: center; gap: 32px; }
+    .footer-links a { color: var(--main-green-dark); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 10px; font-size: 1.1em;}
+    .footer-links a:hover { text-decoration: underline; color: var(--main-green); }
+    .icon-social { width: 32px; height: 32px; display: inline-block; vertical-align: middle;}
+    footer { text-align: center; padding: 18px 0 6px 0; background: #fff; color: var(--main-green-dark);}
     @media (max-width: 600px) {
       .container { padding: 15px; }
       .logo { width: 100px; }
       .btn-group { flex-direction: column; gap: 8px; }
+      .footer-links { flex-direction: column; gap: 12px; }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -41,6 +53,7 @@
 
     <!-- Boutons vers les rubriques -->
     <div class="btn-group">
+      <a href="/index.html" class="btn">Accueil</a>
       <a href="/podcasts.html" class="btn">Podcasts</a>
       <a href="/temoignages.html" class="btn">Témoignages</a>
       <a href="/engagements.html" class="btn">Engagements</a>
@@ -110,6 +123,30 @@
     </section>
   </main>
   <footer>
+    <div class="footer-links">
+      <a href="https://youtube.com/@lechodenosclameurs?si=OH-d_zMRtvzF1Vcj" target="_blank" rel="noopener">
+        <span class="icon-social" aria-label="Youtube" title="Youtube" style="background:none;">
+          <!-- SVG Youtube style clameurs -->
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="8" width="28" height="16" rx="6" fill="#FF0000"/>
+            <polygon points="13,12 22,16 13,20" fill="#fff"/>
+          </svg>
+        </span>
+        Youtube
+      </a>
+      <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank" rel="noopener">
+        <span class="icon-social" aria-label="Instagram" title="Instagram" style="background:none;">
+          <!-- SVG Instagram style clameurs -->
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="4" width="24" height="24" rx="7" fill="#E4405F"/>
+            <circle cx="16" cy="16" r="7" fill="#fff"/>
+            <circle cx="16" cy="16" r="5" fill="#E4405F"/>
+            <circle cx="22" cy="10" r="2" fill="#fff"/>
+          </svg>
+        </span>
+        Instagram
+      </a>
+    </div>
     &copy; 2025 L’écho de nos clameurs. Tous droits réservés.
   </footer>
 </body>
