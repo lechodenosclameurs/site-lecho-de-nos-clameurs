@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast</title>
+  <style>
+    :root {
+      --color-primary: #3e8e41;
+      --color-bg: #f8f9fa;
+      --color-text: #222;
+      --color-white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    /* === BANNIÈRE === */
+    .banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* === HEADER === */
+    header {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header .logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* === MENU AVEC BOUTONS ARRONDIS === */
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .menu a {
+      background-color: #2f6f32;
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .menu a:hover {
+      background-color: #4fb352;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* === CONTENU === */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .container h2 {
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .episode {
+      background-color: var(--color-white);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .episode:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .episode img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .episode-content {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .episode-content h3 {
+      color: var(--color-primary);
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .episode-content p {
+      margin: 0 0 10px 0;
+      line-height: 1.5;
+    }
+
+    .episode-content a {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .episode-content a:hover {
+      background-color: #4fb352;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .social-links {
+      margin-bottom: 10px;
+    }
+
+    .social-links a {
+      color: var(--color-white);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    .social-links a:hover {
+      opacity: 0.8;
+    }
+
+    /* === MOBILE === */
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+      }
+      .episode {
+        flex-direction: column;
+        text-align: center;
+      }
+      .episode img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ BANNIÈRE TOUT EN HAUT -->
+  <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner" />
+
+  <!-- ✅ HEADER -->
+  <header>
+    <img src="logo_clameurs.jpg" alt="Logo du podcast" class="logo" />
+
+    <!-- Menu arrondi -->
+    <div class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="/live">Live / Actualités</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Nos derniers épisodes</h2>
+
+    <div class="episode">
+      <img src="episode1.jpg" alt="Couverture épisode 1">
+      <div class="episode-content">
+        <h3>Épisode 1 — Titre de l’épisode</h3>
+        <p><strong>Date :</strong> 1er octobre 2025</p>
+        <p>Résumé : Brève présentation du sujet, des intervenants et des moments marquants de cet épisode.</p>
+        <a href="#">Écouter sur Spotify</a>
+      </div>
+    </div>
+
+    <div class="episode">
+      <img src="episode2.jpg" alt="Couverture épisode 2">
+      <div class="episode-content">
+        <h3>Épisode 2 — Titre de l’épisode</h3>
+        <p><strong>Date :</strong> 15 octobre 2025</p>
+        <p>Résumé : Aperçu du thème principal et des discussions inspirantes abordées dans cet épisode.</p>
+        <a href="#">Écouter sur YouTube</a>
+      </div>
+    </div>
+
+    <div class="episode">
+      <img src="episode3.jpg" alt="Couverture épisode 3">
+      <div class="episode-content">
+        <h3>Épisode 3 — À venir</h3>
+        <p><strong>Date :</strong> Bientôt disponible</p>
+        <p>Teaser : découvrez prochainement le nouvel épisode avec des invités passionnants.</p>
+        <a href="#">Bientôt disponible</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <span>Suivez-nous :</span>
+      <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank">Instagram</a> |
+      <a href="https://youtube.com/@lechodenosclameurs?si=MlKrsMc3q4pnQqzq" target="_blank">YouTube</a>
+    </div>
+    <p>&copy; 2025 L'Écho de nos Clameurs. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
