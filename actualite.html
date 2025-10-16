@@ -12,18 +12,18 @@
             color: #222;
         }
         header {
-            background-color: #3e8e41; /* Green color */
+            background-color: #3e8e41;
             color: white;
             text-align: center;
             padding: 10px;
         }
         .banner {
             width: 100%;
-            max-height: 300px; /* Adjust as needed */
+            max-height: 300px;
             object-fit: cover;
         }
         .logo {
-            width: 150px; /* Adjust logo size */
+            width: 150px;
             display: block;
             margin: 20px auto;
         }
@@ -40,7 +40,7 @@
             margin-bottom: 20px;
         }
         h2 {
-            color: #3e8e41; /* Green color */
+            color: #3e8e41;
         }
         .news-item {
             border-bottom: 1px solid #ddd;
@@ -51,12 +51,22 @@
         }
         footer {
             text-align: center;
-            padding: 15px 0;
-            background-color: #3e8e41; /* Green color */
+            padding: 20px 0;
+            background-color: #3e8e41;
             color: white;
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #d4fcd4;
         }
         @media (max-width: 600px) {
             .container {
@@ -68,8 +78,8 @@
 <body>
 
     <header>
-        <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner"> <!-- Replace with your banner URL -->
-        <img src="logo_clameurs.jpg" alt="Logo de L’Écho de nos Clameurs" class="logo"> <!-- Replace with your logo URL -->
+        <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner">
+        <img src="logo_clameurs.jpg" alt="Logo de L’Écho de nos Clameurs" class="logo">
         <h1>L'Écho de nos Clameurs</h1>
         <p>Suivez l'actualité de notre podcast !</p>
     </header>
@@ -78,27 +88,33 @@
         <h2>Dernières Actualités</h2>
 
         <div class="news-item">
-            <h3>Épisode 1: Titres de l'épisode</h3>
-            <p>Date : 1er octobre 2025</p>
+            <h3>Épisode 1 : Titre de l'épisode</h3>
+            <p><strong>Date :</strong> 1er octobre 2025</p>
             <p>Résumé de l'épisode : Brève description de l'épisode, ses thèmes principaux et ce que les auditeurs peuvent en attendre.</p>
         </div>
 
         <div class="news-item">
-            <h3>Épisode 2: Titres de l'épisode</h3>
-            <p>Date : 15 octobre 2025</p>
+            <h3>Épisode 2 : Titre de l'épisode</h3>
+            <p><strong>Date :</strong> 15 octobre 2025</p>
             <p>Résumé de l'épisode : Brève description de l'épisode, ses thèmes principaux et ce que les auditeurs peuvent en attendre.</p>
         </div>
 
         <div class="news-item">
-            <h3>Épisode 3: Titres de l'épisode</h3>
-            <p>Date : À venir</p>
+            <h3>Épisode 3 : Titre de l'épisode</h3>
+            <p><strong>Date :</strong> À venir</p>
             <p>Résumé de l'épisode : Brève description de l'épisode, ses thèmes principaux et ce que les auditeurs peuvent en attendre.</p>
         </div>
     </div>
 
     <footer>
+        <div class="social-links">
+            <p>Suivez-nous sur :</p>
+            <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank">Instagram</a> |
+            <a href="https://youtube.com/@lechodenosclameurs?si=MlKrsMc3q4pnQqzq" target="_blank">YouTube</a>
+        </div>
         <p>&copy; 2025 L'Écho de nos Clameurs. Tous droits réservés.</p>
     </footer>
 
 </body>
 </html>
+
