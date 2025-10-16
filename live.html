@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live – L'Écho de nos Clameurs</title>
+  <style>
+    :root {
+      --color-primary: #3e8e41;
+      --color-bg: #f8f9fa;
+      --color-text: #222;
+      --color-white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    /* === BANNIÈRE === */
+    .banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* === HEADER === */
+    header {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header .logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* === MENU AVEC BOUTONS ARRONDIS === */
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .menu a {
+      background-color: #2f6f32;
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .menu a:hover {
+      background-color: #4fb352;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* === CONTENU === */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: var(--color-primary);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .live-player {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background-color: var(--color-white);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: var(--color-primary);
+      margin-top: 0;
+    }
+
+    .card p {
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .social-links {
+      margin-bottom: 10px;
+    }
+
+    .social-links a {
+      color: var(--color-white);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    .social-links a:hover {
+      opacity: 0.8;
+    }
+
+    /* === MOBILE === */
+    @media (max-width: 600px) {
+      .banner {
+        height: 200px;
+      }
+      .live-player {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ BANNIÈRE EN HAUT -->
+  <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner" />
+
+  <!-- ✅ HEADER -->
+  <header>
+    <img src="logo_clameurs.jpg" alt="Logo du podcast" class="logo" />
+
+    <!-- Menu arrondi -->
+    <div class="menu">
+      <a href="/">Accueil</a>
+      <a href="/live">Live / Actualités</a>
+      <a href="/podcast">Podcast</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- === CONTENU PRINCIPAL === -->
+  <div class="container">
+    <h2>Écoutez notre Live en direct 🎧</h2>
+
+    <!-- Intégration du flux (YouTube / Twitch / Radio) -->
+    <iframe
+      class="live-player"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      allowfullscreen
+    ></iframe>
+
+    <div class="section">
+      <h2>Prochains Lives</h2>
+
+      <div class="card">
+        <h3>Live spécial — Les voix des territoires</h3>
+        <p><strong>Date :</strong> 22 octobre 2025 à 20h</p>
+        <p>Une soirée de discussion autour des projets locaux et des témoignages inspirants des jeunes engagés.</p>
+      </div>
+
+      <div class="card">
+        <h3>Émission en direct depuis le rassemblement</h3>
+        <p><strong>Date :</strong> 10 novembre 2025 à 18h30</p>
+        <p>Retrouvez notre équipe sur le terrain pour un live immersif avec des invités surprises !</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Replays disponibles</h2>
+
+      <div class="card">
+        <h3>Replay — Lancement du podcast</h3>
+        <p><strong>Date :</strong> 1er octobre 2025</p>
+        <p>Retour sur le tout premier live où nous présentions les coulisses de “L’Écho de nos Clameurs”.</p>
+        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Regarder le replay sur YouTube</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Replay — “Paroles de jeunes engagés”</h3>
+        <p><strong>Date :</strong> 5 octobre 2025</p>
+        <p>Des échanges passionnants autour des engagements solidaires et environnementaux des jeunes participants.</p>
+        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Regarder le replay sur YouTube</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <span>Suivez-nous :</span>
+      <a href="https://www.instagram.com/votre_compte" target="_blank">Instagram</a> |
+      <a href="https://www.youtube.com/votre_chaine" target="_blank">YouTube</a>
+    </div>
+    <p>&copy; 2025 L'Écho de nos Clameurs. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
