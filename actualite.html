@@ -1,120 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Écho de nos Clameurs - Actualités</title>
-    <style>
-        body {
-            font-family: 'Montserrat', Arial, sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-            color: #222;
-        }
-        header {
-            background-color: #3e8e41;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-        .banner {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-        }
-        .logo {
-            width: 150px;
-            display: block;
-            margin: 20px auto;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #3e8e41;
-        }
-        .news-item {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-        }
-        .news-item:last-child {
-            border-bottom: none;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #3e8e41;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .social-links a:hover {
-            color: #d4fcd4;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualités – L'Écho de nos Clameurs</title>
+  <style>
+    :root {
+      --color-primary: #3e8e41; /* vert principal */
+      --color-bg: #f8f9fa;
+      --color-text: #222;
+      --color-white: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+    }
+    header {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+    header .logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: var(--color-white);
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+    .banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .live-section {
+      margin-bottom: 60px;
+    }
+    .live-section h2 {
+      color: var(--color-primary);
+      margin-bottom: 20px;
+    }
+    .live-embed {
+      width: 100%;
+      height: 500px;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      /* Ici tu pourras intégrer un lecteur vidéo ou flux live */
+    }
+    .news-list {
+      margin-top: 40px;
+    }
+    .news-item {
+      background-color: var(--color-white);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .news-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .news-item h3 {
+      margin: 0 0 10px 0;
+      color: var(--color-primary);
+    }
+    .news-item .meta {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .news-item p {
+      margin: 0;
+    }
+    footer {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .social-links {
+      margin-bottom: 10px;
+    }
+    .social-links a {
+      color: var(--color-white);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    .social-links a:hover {
+      opacity: 0.8;
+    }
+    @media (max-width: 600px) {
+      .live-embed {
+        height: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <img src="logo_clameurs.jpg" alt="Logo L'Écho de nos Clameurs" class="logo" />
+    <h1>L'Écho de nos Clameurs</h1>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/live">Live / Actualités</a>
+      <a href="/episodes">Épisodes</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
 
-    <header>
-        <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner">
-        <img src="logo_clameurs.jpg" alt="Logo de L’Écho de nos Clameurs" class="logo">
-        <h1>L'Écho de nos Clameurs</h1>
-        <p>Suivez l'actualité de notre podcast !</p>
-    </header>
+  <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner" />
 
-    <div class="container">
-        <h2>Dernières Actualités</h2>
+  <div class="container">
+    <!-- Section Live / Flux vidéo -->
+    <section class="live-section">
+      <h2>Flux en direct</h2>
+      <div class="live-embed">
+        <!-- Tu peux insérer ici un iframe YouTube / player -->
+        <p>Le direct arrivera ici</p>
+      </div>
+    </section>
 
-        <div class="news-item">
-            <h3>Épisode 1 : Titre de l'épisode</h3>
-            <p><strong>Date :</strong> 1er octobre 2025</p>
-            <p>Résumé de l'épisode : Brève description de l'épisode, ses thèmes principaux et ce que les auditeurs peuvent en attendre.</p>
-        </div>
+    <!-- Section Actualités / Derniers articles -->
+    <section class="news-list">
+      <h2>Dernières actualités</h2>
 
-        <div class="news-item">
-            <h3>Épisode 2 : Titre de l'épisode</h3>
-            <p><strong>Date :</strong> 15 octobre 2025</p>
-            <p>Résumé de l'épisode : Brève description de l'épisode, ses thèmes principaux et ce que les auditeurs peuvent en attendre.</p>
-        </div>
+      <div class="news-item">
+        <h3>Épisode Spécial — Rencontre avec …</h3>
+        <div class="meta">Publié le 12 octobre 2025</div>
+        <p>Un aperçu du contenu de cet épisode… Ce que vous trouverez à l’intérieur, les invités, les thèmes traités, etc.</p>
+      </div>
 
-        <div class="news-item">
-            <h3>Épisode 3 : Titre de l'épisode</h3>
-            <p><strong>Date :</strong> À venir</p>
-            <p>Résumé de l'épisode : Brève description de l'épisode, ses thèmes principaux et ce que les auditeurs peuvent en attendre.</p>
-        </div>
+      <div class="news-item">
+        <h3>Un bilan après les premières émissions</h3>
+        <div class="meta">Publié le 1 octobre 2025</div>
+        <p>Retour sur les premières émissions : ce que nous avons appris, les retours des auditeurs, les perspectives pour la suite.</p>
+      </div>
+
+      <div class="news-item">
+        <h3>Annonce de notre prochaine diffusion en direct</h3>
+        <div class="meta">Publié le 20 septembre 2025</div>
+        <p>Préparez-vous pour notre prochaine session live : date, heure, thèmes, etc.</p>
+      </div>
+
+      <!-- Tu peux ajouter d’autres .news-item -->
+    </section>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <span>Suivez-nous :</span>
+      <a href="https://www.instagram.com/votre_compte" target="_blank">Instagram</a>
+      |
+      <a href="https://www.youtube.com/votre_chaine" target="_blank">YouTube</a>
     </div>
-
-    <footer>
-        <div class="social-links">
-            <p>Suivez-nous sur :</p>
-            <a href="https://www.instagram.com/lecho_de_nos_clameurs/" target="_blank">Instagram</a> |
-            <a href="https://youtube.com/@lechodenosclameurs?si=MlKrsMc3q4pnQqzq" target="_blank">YouTube</a>
-        </div>
-        <p>&copy; 2025 L'Écho de nos Clameurs. Tous droits réservés.</p>
-    </footer>
-
+    <p>&copy; 2025 L'Écho de nos Clameurs. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
 
