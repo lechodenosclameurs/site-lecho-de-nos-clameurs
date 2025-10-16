@@ -20,6 +20,16 @@
       background-color: var(--color-bg);
       color: var(--color-text);
     }
+
+    /* === BANNIÈRE === */
+    .banner {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* === HEADER === */
     header {
       background-color: var(--color-primary);
       color: var(--color-white);
@@ -48,12 +58,8 @@
     nav a:hover {
       opacity: 0.8;
     }
-    .banner {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      display: block;
-    }
+
+    /* === CONTENU === */
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -74,7 +80,7 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      /* Ici tu pourras intégrer un lecteur vidéo ou flux live */
+      border-radius: 8px;
     }
     .news-list {
       margin-top: 40px;
@@ -103,6 +109,8 @@
     .news-item p {
       margin: 0;
     }
+
+    /* === FOOTER === */
     footer {
       background-color: var(--color-primary);
       color: var(--color-white);
@@ -122,6 +130,8 @@
     .social-links a:hover {
       opacity: 0.8;
     }
+
+    /* === MOBILE === */
     @media (max-width: 600px) {
       .live-embed {
         height: 300px;
@@ -130,64 +140,65 @@
   </style>
 </head>
 <body>
+
+  <!-- BANNIÈRE tout en haut -->
+  <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner" />
+
   <header>
     <img src="logo_clameurs.jpg" alt="Logo L'Écho de nos Clameurs" class="logo" />
     <h1>L'Écho de nos Clameurs</h1>
     <nav>
-      <a href="index.html">Accueil</a>
+      <a href="/">Accueil</a>
       <a href="/live">Live / Actualités</a>
-      <a href="/episodes">Podcast</a>
-      <a href="contact.html">Contact</a>
-       </nav>
+      <a href="/episodes">Épisodes</a>
+      <a href="/contact">Contact</a>
+    </nav>
   </header>
 
-  <img src="Banniere_clameurs.jpeg" alt="Bannière du podcast" class="banner" />
-
   <div class="container">
-    <!-- Section Live / Flux vidéo -->
+    <!-- Section Live -->
     <section class="live-section">
       <h2>Flux en direct</h2>
       <div class="live-embed">
-        <!-- Tu peux insérer ici un iframe YouTube / player -->
+        <!-- Tu peux insérer ici un iframe YouTube ou autre -->
         <p>Le direct arrivera ici</p>
       </div>
     </section>
 
-    <!-- Section Actualités / Derniers articles -->
+    <!-- Section Actualités -->
     <section class="news-list">
       <h2>Dernières actualités</h2>
 
       <div class="news-item">
         <h3>Épisode Spécial — Rencontre avec …</h3>
         <div class="meta">Publié le 12 octobre 2025</div>
-        <p>Un aperçu du contenu de cet épisode… Ce que vous trouverez à l’intérieur, les invités, les thèmes traités, etc.</p>
+        <p>Un aperçu du contenu de cet épisode… invités, thèmes, discussions, etc.</p>
       </div>
 
       <div class="news-item">
         <h3>Un bilan après les premières émissions</h3>
         <div class="meta">Publié le 1 octobre 2025</div>
-        <p>Retour sur les premières émissions : ce que nous avons appris, les retours des auditeurs, les perspectives pour la suite.</p>
+        <p>Retour sur les débuts du podcast et sur ce que nous préparons pour la suite.</p>
       </div>
 
       <div class="news-item">
         <h3>Annonce de notre prochaine diffusion en direct</h3>
         <div class="meta">Publié le 20 septembre 2025</div>
-        <p>Préparez-vous pour notre prochaine session live : date, heure, thèmes, etc.</p>
+        <p>Découvrez la date, le thème et les invités de notre prochaine diffusion.</p>
       </div>
-
-      <!-- Tu peux ajouter d’autres .news-item -->
     </section>
   </div>
 
   <footer>
     <div class="social-links">
       <span>Suivez-nous :</span>
-      <a href="https://www.instagram.com/votre_compte" target="_blank">Instagram</a>
-      |
+      <a href="https://www.instagram.com/votre_compte" target="_blank">Instagram</a> |
       <a href="https://www.youtube.com/votre_chaine" target="_blank">YouTube</a>
     </div>
     <p>&copy; 2025 L'Écho de nos Clameurs. Tous droits réservés.</p>
   </footer>
+
 </body>
 </html>
+
 
